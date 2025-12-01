@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--navigation item is selected will change color-->
     <item android:color="@color/nav_selected" android:state_checked="true"/>
+
+    <!-- the unselected navigation stay with the current colour-->
     <item android:color="@color/nav_unselected"/>
 </selector>

@@ -4,19 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--linearlayout contains all UI element vertically-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!--application logo-->
         <ImageView
             android:id="@+id/appIcon"
-            android:layout_width="219dp"
-            android:layout_height="236dp"
+            android:layout_width="308dp"
+            android:layout_height="266dp"
             android:layout_gravity="center"
             android:contentDescription="App Icon"
             android:src="@drawable/logo2" />
 
+        <!--my profile detail-->
         <TextView
             android:id="@+id/profileInfo"
             android:layout_width="match_parent"
@@ -25,7 +28,7 @@
             android:gravity="center"
             android:text="~Author Profile~ "
             android:textColor="@color/colorPrimary"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <ImageView
@@ -33,7 +36,7 @@
             android:layout_width="122dp"
             android:layout_height="137dp"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
             android:contentDescription="App Icon"
             android:src="@drawable/ummi" />
 
@@ -42,9 +45,11 @@
             android:id="@+id/profileInfoName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="left"
-            android:text="Name : UMMI KARTINI BT SAIFUL AHMAD KAMIL"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@drawable/textbox"
+            android:text="UMMI KARTINI BT SAIFUL AHMAD KAMIL"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -54,8 +59,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:gravity="left"
-            android:text="Matric No : 2023443792"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@drawable/textbox"
+            android:text="2023443792"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -65,25 +72,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:gravity="left"
-            android:text="Course : CDCS251"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@drawable/textbox"
+            android:text="CDCS251"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
-
+        <!--github url-->
         <TextView
             android:id="@+id/githubURL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:autoLink="web"
-            android:gravity="left"
+            android:gravity="center"
             android:linksClickable="true"
             android:text="https://github.com/ummikartini01/VehicleLoanCalculator_ICT602"
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <!-- copyright label -->
         <TextView
             android:id="@+id/copyright"
             android:layout_width="match_parent"

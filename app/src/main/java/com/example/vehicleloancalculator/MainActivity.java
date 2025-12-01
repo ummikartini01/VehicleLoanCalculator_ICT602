@@ -18,16 +18,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //default fragment - home
+        //show home fragment when app start
         getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container, new HomeFragment())
                                 . commit();
 
+        //connect bottom navigation from layout, can be click
         BottomNavigationView navView = findViewById(R.id.bottom_nav);
 
         navView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
 
+            //home button navigation
             if (id == R.id.nav_home){
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container, new HomeFragment())
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
                     }
 
+            //about button navigation
             if (id == R.id.nav_about) {
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container, new AboutFragment())

@@ -22,8 +22,10 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceSate){
 
-       View view = inflater.inflate(R.layout.fragment_home, container, false);
+        //convert xml layout into view object (on screen)
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        //convert xml to java
        etVehiclePrice = view.findViewById(R.id.etVehiclePrice);
        etDownPayment = view.findViewById(R.id.etDownPayment);
        etLoanPeriod = view.findViewById(R.id.etLoanPeriod);
@@ -31,6 +33,7 @@ public class HomeFragment extends Fragment {
 
        Button btnCalc = view.findViewById(R.id.btnCalc);
 
+       //display calculated result
        tvLoanAmount = view.findViewById(R.id.tvLoanAmount);
        tvTotalInterest = view.findViewById(R.id.tvTotalInterest);
        tvTotalPayment = view.findViewById(R.id.tvTotalPayment);
@@ -44,6 +47,7 @@ public class HomeFragment extends Fragment {
     private void calculateLoan() {
         if (!validateInputs()) return;
 
+        //declare and input
         double vehiclePrice = Double.parseDouble(etVehiclePrice.getText().toString());
         double downPayment = Double.parseDouble(etDownPayment.getText().toString());
         int loanYears = Integer.parseInt(etLoanPeriod.getText().toString());
@@ -61,7 +65,7 @@ public class HomeFragment extends Fragment {
         tvMonthlyPayment.setText("Monthly Payment:" + String.format("RM %, .2f", monthlyPayment));
 
     }
-    //make sure all required input has been entered
+    //make sure all required input has been entered,if not error message pop up
     private boolean validateInputs() {
         if(TextUtils.isEmpty(etVehiclePrice.getText())){
             etVehiclePrice.setError("Enter vehicle price !");
@@ -83,6 +87,7 @@ public class HomeFragment extends Fragment {
             return false;
         }
 
+        // to ensure down payment cannot be more than vehicle price
         try {
             double vp = Double.parseDouble(etVehiclePrice.getText().toString());
             double dp = Double.parseDouble(etDownPayment.getText().toString());

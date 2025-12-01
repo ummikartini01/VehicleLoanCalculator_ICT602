@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--linearlayout contains all UI element vertically-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
+        <!--app title -->
         <TextView
             android:id="@+id/appTitle"
             android:layout_width="wrap_content"
@@ -20,6 +23,7 @@
             android:layout_marginTop="25dp"
             android:layout_gravity="center"/>
 
+        <!--welcome message -->
         <TextView
             android:id="@+id/appWelcome"
             android:layout_width="wrap_content"
@@ -32,49 +36,89 @@
             android:layout_gravity="center"/>
 
 
-        <!--enter input-->
+        <!--user enter input-->
+        <!--vehicle price-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
         <EditText
             android:id="@+id/etVehiclePrice"
             android:hint="Vehicle Price (RM)"
             android:inputType="numberDecimal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
+            android:padding="13dp"
+            android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"/>
-        <!--backgroundTint to overlay color-->
+        </androidx.cardview.widget.CardView>
+
+        <!--down payment-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
 
         <EditText
             android:id="@+id/etDownPayment"
             android:hint="Down Payment (RM)"
             android:inputType="numberDecimal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
+            android:padding="12dp"
+            android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <!--loan period-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
 
         <EditText
             android:id="@+id/etLoanPeriod"
             android:hint="Loan Period (years)"
             android:inputType="number"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
+            android:padding="12dp"
+            android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"/>
+        </androidx.cardview.widget.CardView>
+
+        <!--interest rate-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
 
         <EditText
             android:id="@+id/etInterestRate"
             android:hint="Interest Rate (% per year)"
             android:inputType="numberDecimal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
+            android:padding="12dp"
+            android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"/>
+        </androidx.cardview.widget.CardView>
 
-
+        <!--calculate button-->
         <Button
             android:id="@+id/btnCalc"
             android:layout_width="130dp"
@@ -105,9 +149,10 @@
             android:text="Loan Amount: "
             android:layout_marginTop="20dp"
             android:textSize="20sp"
+            android:padding="12dp"
+            android:background="@drawable/textbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"/>
 
 
@@ -116,9 +161,10 @@
             android:text="Total Interest: "
             android:layout_marginTop="20dp"
             android:textSize="20sp"
+            android:padding="12dp"
+            android:background="@drawable/textbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"/>
 
         <TextView
@@ -126,9 +172,10 @@
             android:text="Total Payment: "
             android:layout_marginTop="20dp"
             android:textSize="20sp"
+            android:padding="12dp"
+            android:background="@drawable/textbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"/>
 
         <TextView
@@ -136,9 +183,10 @@
             android:text="Monthly Payment: "
             android:layout_marginTop="20dp"
             android:textSize="20sp"
+            android:padding="12dp"
+            android:background="@drawable/textbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"/>
 
 
