@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import java.text.DecimalFormat;
 
 public class HomeFragment extends Fragment {
 
