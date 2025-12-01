@@ -13,21 +13,36 @@
             android:id="@+id/appTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Vehicle Loan Estimator Monthly"
+            android:text="-Vehicle Loan Estimator-"
+            android:textColor="@color/colorPrimary"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:layout_gravity="center" />
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/appWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome ! Please enter your input"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"/>
+
 
         <!--enter input-->
         <EditText
             android:id="@+id/etVehiclePrice"
             android:hint="Vehicle Price (RM)"
             android:inputType="numberDecimal"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/colorPrimaryDark"/>
+        <!--backgroundTint to overlay color-->
 
         <EditText
             android:id="@+id/etDownPayment"
@@ -59,7 +74,6 @@
             android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/colorPrimaryDark"/>
 
-        <!--view result-->
 
         <Button
             android:id="@+id/btnCalc"
@@ -67,61 +81,65 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/colorAccent"
+            android:backgroundTint="@color/colorBrown"
             android:fontFamily="sans-serif-medium"
-            android:padding="12dp"
+            android:padding="10dp"
             android:text="Calculate"
             android:textColor="@color/white" />
 
+        <!--view result after click button calculate-->
         <TextView
             android:id="@+id/appResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Result:"
+            android:textColor="@color/colorPrimary"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="left" />
+
 
         <TextView
             android:id="@+id/tvLoanAmount"
             android:text="Loan Amount: "
             android:layout_marginTop="20dp"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/colorPrimary"/>
+
 
         <TextView
             android:id="@+id/tvTotalInterest"
             android:text="Total Interest: "
             android:layout_marginTop="20dp"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/colorPrimary"/>
 
         <TextView
             android:id="@+id/tvTotalPayment"
             android:text="Total Payment: "
             android:layout_marginTop="20dp"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/colorPrimary"/>
 
         <TextView
             android:id="@+id/tvMonthlyPayment"
             android:text="Monthly Payment: "
             android:layout_marginTop="20dp"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/colorPrimary"/>
 
 
     </LinearLayout>

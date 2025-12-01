@@ -11,8 +11,7 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="64dp"
-        android:background="@color/mintFrost"
+        android:layout_marginBottom="62dp"
         />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -20,9 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="bottom"
-        app:itemTextColor="@color/nav_item_colors"
+        android:background="@color/colorPrimary"
         app:itemIconTint="@color/nav_item_colors"
-        app:menu="@menu/bottom_nav_menu"
-        android:background="@color/colorPrimary"/>
+        app:itemTextColor="@color/nav_item_colors"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

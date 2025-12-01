@@ -11,38 +11,32 @@
 
         <ImageView
             android:id="@+id/appIcon"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="219dp"
+            android:layout_height="236dp"
             android:layout_gravity="center"
             android:contentDescription="App Icon"
-            android:src="@drawable/logo" />
-
-        <TextView
-            android:text="   Vehicle Loan Estimator Monthly"
-            android:textStyle="bold"
-            android:textSize="25sp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:id="@+id/appIconMe"
-            android:layout_width="91dp"
-            android:layout_height="88dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:contentDescription="App Icon"
-            android:src="@drawable/ummi" />
+            android:src="@drawable/logo2" />
 
         <TextView
             android:id="@+id/profileInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="My Profile "
-            android:textSize="20sp"/>
+            android:text="~Author Profile~ "
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/appIconMe"
+            android:layout_width="122dp"
+            android:layout_height="137dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:contentDescription="App Icon"
+            android:src="@drawable/ummi" />
+
 
         <TextView
             android:id="@+id/profileInfoName"
@@ -51,7 +45,9 @@
             android:layout_marginTop="10dp"
             android:gravity="left"
             android:text="Name : UMMI KARTINI BT SAIFUL AHMAD KAMIL"
-            android:textSize="18sp"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/profileInfoMatric"
@@ -60,7 +56,9 @@
             android:layout_marginTop="8dp"
             android:gravity="left"
             android:text="Matric No : 2023443792"
-            android:textSize="18sp"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/profileInfoCourse"
@@ -69,30 +67,33 @@
             android:layout_marginTop="8dp"
             android:gravity="left"
             android:text="Course : CDCS251"
-            android:textSize="18sp"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
 
         <TextView
             android:id="@+id/githubURL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textSize="20sp"
-            android:gravity="left"
-            android:text="https://github.com/ummikartini01/vehicle-loan-calculator.git"
+            android:layout_marginTop="10dp"
             android:autoLink="web"
-            android:linksClickable="true"/>
-
+            android:gravity="left"
+            android:linksClickable="true"
+            android:text="https://github.com/ummikartini01/VehicleLoanCalculator_ICT602"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/copyright"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/copyright"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="50dp"
             android:gravity="center"
+            android:text="COPYRIGHT BY UMMI KARTINI 2025"
+            android:textColor="@color/colorBrown"
             android:textSize="15sp"
-            android:text="COPYRIGHT BY UMMI KARTINI 2025"/>
-
-
+            android:textStyle="bold" />
 
 
     </LinearLayout>

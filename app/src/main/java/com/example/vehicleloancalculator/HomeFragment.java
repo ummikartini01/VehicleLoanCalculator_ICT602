@@ -49,6 +49,7 @@ public class HomeFragment extends Fragment {
         int loanYears = Integer.parseInt(etLoanPeriod.getText().toString());
         double interestRate = Double.parseDouble(etInterestRate.getText().toString());
 
+        // formula to calculate loan
         double loanAmount = vehiclePrice - downPayment;
         double totalInterest = loanAmount * (interestRate/100.0) * loanYears;
         double totalPayment = loanAmount + totalInterest;
@@ -60,7 +61,7 @@ public class HomeFragment extends Fragment {
         tvMonthlyPayment.setText("Monthly Payment:" + String.format("RM %, .2f", monthlyPayment));
 
     }
-
+    //make sure all required input has been entered
     private boolean validateInputs() {
         if(TextUtils.isEmpty(etVehiclePrice.getText())){
             etVehiclePrice.setError("Enter vehicle price !");
