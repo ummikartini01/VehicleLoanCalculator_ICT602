@@ -31,6 +31,7 @@ public class HomeFragment extends Fragment {
        etInterestRate = view.findViewById(R.id.etInterestRate);
 
        Button btnCalc = view.findViewById(R.id.btnCalc);
+       Button btnReset = view.findViewById(R.id.btnReset);
 
        //display calculated result
        tvLoanAmount = view.findViewById(R.id.tvLoanAmount);
@@ -39,8 +40,25 @@ public class HomeFragment extends Fragment {
        tvMonthlyPayment = view.findViewById(R.id.tvMonthlyPayment);
 
        btnCalc.setOnClickListener(v -> calculateLoan());
+       btnReset.setOnClickListener(v -> resetFields());
+
 
        return view;
+
+    }
+
+    private void resetFields() {
+        etVehiclePrice.getText().clear();
+        etDownPayment.getText().clear();
+        etLoanPeriod.getText().clear();
+        etInterestRate.getText().clear();
+
+        tvLoanAmount.setText("Loan Amount: ");
+        tvTotalInterest.setText("Total Interest: ");
+        tvTotalPayment.setText("Total Payment");
+        tvMonthlyPayment.setText("Monthly Payment");
+
+        Toast.makeText(getContext(),"cleared", Toast.LENGTH_SHORT).show();
     }
 
     private void calculateLoan() {
@@ -58,10 +76,10 @@ public class HomeFragment extends Fragment {
         double totalPayment = loanAmount + totalInterest;
         double monthlyPayment = totalPayment / (loanYears * 12 );
 
-        tvLoanAmount.setText("Loan Amount:" + String.format("RM %, .2f", loanAmount));
-        tvTotalInterest.setText("Total Interest:" + String.format("RM %, .2f", totalInterest));
-        tvTotalPayment.setText("Total Payment:" + String.format("RM %, .2f", totalPayment));
-        tvMonthlyPayment.setText("Monthly Payment:" + String.format("RM %, .2f", monthlyPayment));
+        tvLoanAmount.setText("Loan Amount:" + String.format("RM %,.2f", loanAmount));
+        tvTotalInterest.setText("Total Interest:" + String.format("RM %,.2f", totalInterest));
+        tvTotalPayment.setText("Total Payment:" + String.format("RM %,.2f", totalPayment));
+        tvMonthlyPayment.setText("Monthly Payment:" + String.format("RM %,.2f", monthlyPayment));
 
     }
     //make sure all required input has been entered,if not error message pop up

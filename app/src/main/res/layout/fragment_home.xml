@@ -118,18 +118,40 @@
             android:textColor="@color/colorPrimaryDark"/>
         </androidx.cardview.widget.CardView>
 
-        <!--calculate button-->
-        <Button
-            android:id="@+id/btnCalc"
-            android:layout_width="130dp"
+        <!--calculate & reset button-->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="@color/colorBrown"
-            android:fontFamily="sans-serif-medium"
-            android:padding="10dp"
-            android:text="Calculate"
-            android:textColor="@color/white" />
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="20dp" >
+
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="sans-serif-medium"
+                android:padding="10dp"
+                android:text="Reset"
+                android:textColor="@color/white"
+                android:layout_marginEnd="12dp"/>
+
+
+            <Button
+                 android:id="@+id/btnCalc"
+                 android:layout_width="130dp"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="right"
+                 android:layout_marginTop="20dp"
+                 android:backgroundTint="@color/colorBrown"
+                 android:fontFamily="sans-serif-medium"
+                 android:padding="10dp"
+                 android:text="Calculate"
+                 android:textColor="@color/white" />
+
+         </LinearLayout>
 
         <!--view result after click button calculate-->
         <TextView
@@ -140,7 +162,7 @@
             android:textColor="@color/colorPrimary"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
             android:layout_gravity="left" />
 
 
@@ -149,7 +171,7 @@
             android:text="Loan Amount: "
             android:layout_marginTop="20dp"
             android:textSize="20sp"
-            android:padding="12dp"
+            android:padding="10dp"
             android:background="@drawable/textbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -161,7 +183,7 @@
             android:text="Total Interest: "
             android:layout_marginTop="20dp"
             android:textSize="20sp"
-            android:padding="12dp"
+            android:padding="10dp"
             android:background="@drawable/textbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -172,7 +194,7 @@
             android:text="Total Payment: "
             android:layout_marginTop="20dp"
             android:textSize="20sp"
-            android:padding="12dp"
+            android:padding="10dp"
             android:background="@drawable/textbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -183,7 +205,7 @@
             android:text="Monthly Payment: "
             android:layout_marginTop="20dp"
             android:textSize="20sp"
-            android:padding="12dp"
+            android:padding="10dp"
             android:background="@drawable/textbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

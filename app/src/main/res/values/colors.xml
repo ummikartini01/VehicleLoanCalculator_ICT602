@@ -6,4 +6,5 @@
     <color name="nav_unselected">#FFFFFF</color>
     <color name="white">#FFFFFF</color>
     <color name="colorBrown">#956460</color> <!--brown(dark chesnut)-->
+    <color name="colorOrange">#C4661F</color> <!--orange-->
 </resources>

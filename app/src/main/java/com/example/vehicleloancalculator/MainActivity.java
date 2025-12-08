@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         navView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
 
-            //home button navigation
+            //home  navigation
             if (id == R.id.nav_home){
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container, new HomeFragment())
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
                     }
 
-            //about button navigation
+            //about  navigation
             if (id == R.id.nav_about) {
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container, new AboutFragment())
