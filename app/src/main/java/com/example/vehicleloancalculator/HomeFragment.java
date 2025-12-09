@@ -25,29 +25,29 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         //convert xml to java
-       etVehiclePrice = view.findViewById(R.id.etVehiclePrice);
-       etDownPayment = view.findViewById(R.id.etDownPayment);
-       etLoanPeriod = view.findViewById(R.id.etLoanPeriod);
-       etInterestRate = view.findViewById(R.id.etInterestRate);
+        etVehiclePrice = view.findViewById(R.id.etVehiclePrice);
+        etDownPayment = view.findViewById(R.id.etDownPayment);
+        etLoanPeriod = view.findViewById(R.id.etLoanPeriod);
+        etInterestRate = view.findViewById(R.id.etInterestRate);
 
-       Button btnCalc = view.findViewById(R.id.btnCalc);
-       Button btnReset = view.findViewById(R.id.btnReset);
+        Button btnCalc = view.findViewById(R.id.btnCalc);
+        Button btnReset = view.findViewById(R.id.btnReset);
 
-       //display calculated result
-       tvLoanAmount = view.findViewById(R.id.tvLoanAmount);
-       tvTotalInterest = view.findViewById(R.id.tvTotalInterest);
-       tvTotalPayment = view.findViewById(R.id.tvTotalPayment);
-       tvMonthlyPayment = view.findViewById(R.id.tvMonthlyPayment);
+        //display calculated result
+        tvLoanAmount = view.findViewById(R.id.tvLoanAmount);
+        tvTotalInterest = view.findViewById(R.id.tvTotalInterest);
+        tvTotalPayment = view.findViewById(R.id.tvTotalPayment);
+        tvMonthlyPayment = view.findViewById(R.id.tvMonthlyPayment);
 
-       btnCalc.setOnClickListener(v -> calculateLoan());
-       btnReset.setOnClickListener(v -> resetFields());
+        btnCalc.setOnClickListener(v -> calculateLoan());
+        btnReset.setOnClickListener(v -> resetFields());
 
 
-       return view;
+        return view;
 
     }
 
-    private void resetFields() {
+    private void resetFields() { //button reset
         etVehiclePrice.getText().clear();
         etDownPayment.getText().clear();
         etLoanPeriod.getText().clear();
@@ -61,7 +61,7 @@ public class HomeFragment extends Fragment {
         Toast.makeText(getContext(),"cleared", Toast.LENGTH_SHORT).show();
     }
 
-    private void calculateLoan() {
+    private void calculateLoan() {  //button calculate
         if (!validateInputs()) return;
 
         //declare and input
@@ -116,7 +116,7 @@ public class HomeFragment extends Fragment {
             Toast.makeText(getContext(), " Invalid input format", Toast.LENGTH_SHORT).show();
             return false;
         }
-         return true;
+        return true;
 
 
     }
